@@ -76,6 +76,7 @@ button {
     outline: none;
     border: none;
     cursor: pointer;
+    background-color: transparent;
     border-radius: 50px;
     font-size: var(--fn-sz-min);
     font-style: var(--nrml);
@@ -176,9 +177,32 @@ ul {
     padding: 100px 20%;
 }
 
-.slider-slide {
-    padding: 60px 50px;
-    background-color: #E2F0EF;
+.swiper-slide {
+    display: var(--flex) !important;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 450px;
+    justify-content: var(--space);
+    background: no-repeat url(../img/slider-img.jpg) right / contain;
+}
+
+.slide-article {
+    padding: 53px 64px 56px 64px;
+    z-index: 1000;
+}
+
+.slide-rolete-block {
+    position: absolute;
+    z-index: 1;
+    width: 120%;
+    min-height: 150%;
+    transform: rotate(254.7deg);
+    left: -40%;
+    top: -11%;
+    background: linear-gradient(254.7deg, #EFFEFD 10.39%, #EFFEFD 104.1%);
 }
 
 .slider-text-strng {
@@ -186,6 +210,72 @@ ul {
     font-weight: 400;
     font-size: 22px;
     line-height: 28px;
+}
+
+.slider-price {
+    display: flex;
+}
+
+.price-text:first-child {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.slider-btn:first-child {
+    color: var(--clr-white);
+    background-color: var(--clr-green);
+}
+
+.slider-btn:last-child {
+    color: var(--clr-green);
+    border: 1px solid var(--clr-green);
+}
+
+.slider-btn-wrap {
+    margin: 20px 0;
+    display: var(--flex);
+    justify-content: var(--cntr);
+}
+
+.slider-pagination {
+    margin: 0 20px;
+    width: auto !important;
+    position: relative !important;
+}
+
+.swiper-pagination-current {
+    font-size: var(--fn-sz-nrl);
+    color: var(--clr-text);
+    font-style: var(--nrml);
+    font-weight: bold;
+    color: var(--clr-text) !important;
+}
+
+
+.slider-button {
+    cursor: pointer;
+}
+
+.slider-arrow-right {
+    transform: scale(-1, 1);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: relative !important;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0 !important;
+    right: 0 !important;
+    content: none !important;
+}
+
+.swiper-button-prev:after {
+    content: '' !important;
+}
+
+.swiper-button-next:after {
+    content: '' !important;
 }
 
 /*slider-end*/
